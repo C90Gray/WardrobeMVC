@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Wardrobe_MVC.Models.Accessory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center">Accessories</h2>
+
+<p class="text-center">
+   <a class="btn btn-default" href="~/Accessories/Create">Create New &raquo;</a>
+</p>
+<div class="row text-center">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="img-thumbnail">
+                <div class="caption">
+                    <h5>
+                        @Html.DisplayFor(modelItem => item.AccessoryName)
+                    </h5>
+                    <p>
+                        <img class="indexpic" src="@Html.DisplayFor(modelItem => item.AccessoryPic)" />
+                    </p>
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.AccessoryID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.AccessoryID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.AccessoryID })
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

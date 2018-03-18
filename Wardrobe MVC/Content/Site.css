@@ -1,6 +1,10 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: url(https://wallpapercave.com/wp/irL5WAG.jpg);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +25,206 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.detailpic{
+    height:300px;
+    width:300px;
+    border-radius: 5px;
+}
+
+.indexpic{
+    height:300px!important;
+    width:250px!important;
+}
+
+.img-thumbnail{
+    background:black;
+    border-radius:20px;
+    color:blanchedalmond!important;
+    box-shadow: 9px 4px 15px black;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+
+h1, h2, h3, h4{
+    color:rgb(51, 51, 51);
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-family: 'Rammetto One', cursive;
+}
+
+h5, h6 {
+    color: aliceblue;
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-family: 'Limelight', cursive;
+}
+
+.jumbotron {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px !important;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.thumbnail{
+    background:rgba(0, 0, 0, 0.75);
+    border-radius:20px!important;
+    justify-content:center;
+    text-align:center;
+}
+
+p{
+    color:aliceblue;
+}
+
+.btn-default {
+    padding: 5px 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 1px 6px 12px darkgrey, inset -1px -10px 5px grey, 1px 2px 1px black;
+    -moz-box-shadow: inset 1px 6px 12px darkgrey, inset -1px -10px 5px grey, 1px 2px 1px black;
+    box-shadow: inset 1px 6px 12px darkgrey, inset -1px -10px 5px grey, 1px 2px 1px black;
+    background-color:rgb(51, 51, 51);
+    color: aliceblue;
+    text-shadow: 1px 1px 1px black;
+}
+
+a{
+    color:aliceblue;
+    text-decoration:none;
+}
+
+.caropic{
+    height:400px!important;
+    width:auto;
+}
+
+.item{
+    justify-content:center!important;
+    align-items:center;
+
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.carotext {
+    color: aliceblue!important;
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    letter-spacing: 4px!important;
+    font-weight: 400;
+    font-family: 'Limelight', cursive!important;
+}
+
+.smallpic{
+    height:100px;
+    border-radius:5px;
+}
+
+h5{
+    margin-top:20px!important;
+}
+
+.highlight {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px !important;
+    margin-top: 10px;
+}
+
+.form-group{
+    color:aliceblue!important;
+}
+
+#loader {
+    position: absolute;
+    left: 48%;
+    top: 40%;
+    z-index: 1;
+    margin: -75px 0 0 -75px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+.closetloader{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
+
+.logo{
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    margin:0px;
+    
+}
+
+.navbar-brand{
+    padding-top:8px;
 }

@@ -1,0 +1,20 @@
+﻿body {
+    background-image: url('Images/closet.jpg')!important;
+    background-size:cover;
+    background-position:center;
+}
+
+.overlay{
+    background:rgba(0, 0, 0, 0.70);
+    margin-top:100px;
+    padding:50px;
+    text-align:center;
+    justify-content:center;
+}
+
+h1, h2, h3, h4 {
+    color: aliceblue!important;
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-family: 'Rammetto One', cursive;

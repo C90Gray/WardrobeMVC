@@ -1,0 +1,74 @@
+﻿@model Wardrobe_MVC.Models.Outfit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center">Details</h2>
+
+<div>
+    <h3 class="text-center">@Html.DisplayFor(model => model.OutfitName)</h3>
+    <hr />
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+
+                <hr />
+                <h5>Top</h5>
+
+                <p>
+                    @Html.DisplayFor(model => model.Top.TopName)
+                </p>
+
+                <hr />
+
+                <h5>Bottom</h5>
+
+                <p>
+                    @Html.DisplayFor(model => model.Bottom.BottomName)
+                </p>
+
+                <hr />
+
+                <h5>Shoes</h5>
+
+                <p>
+                    @Html.DisplayFor(model => model.Sho.ShoeName)
+                </p>
+
+                <hr />
+
+                <h5>Accessories</h5>
+
+                <p>
+                    @Html.DisplayFor(model => model.Accessory.AccessoryName)
+                </p>
+                <hr />
+            </div>
+
+            <div class="col-md-6">
+                <p>
+                    <img class="smallpic" src="@Html.DisplayFor(model => model.Top.TopPic)" />
+                </p>
+                <hr />
+                <p>
+                    <img class="smallpic" src="@Html.DisplayFor(model => model.Bottom.BottomPic)" />
+                </p>
+                <hr />
+                <p>
+                    <img class="smallpic" src="@Html.DisplayFor(model => model.Sho.ShoePic)" />
+                </p>
+                <hr />
+                <p>
+                    <img class="smallpic" src="@Html.DisplayFor(model => model.Accessory.AccessoryPic)" />
+                </p>
+                <hr />
+               
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

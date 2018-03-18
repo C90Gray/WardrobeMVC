@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Wardrobe_MVC.Models.Outfit>
+
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center">Outfits</h2>
+
+<p class="text-center btn-default">
+     @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+
+    <h3 class="text-center carotext">@Html.DisplayFor(modelItem => item.OutfitName)</h3>
+    <hr />
+    <div class="row">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="caropic" src=" @Html.DisplayFor(modelItem => item.Accessory.AccessoryPic)">
+                </div>
+
+                <div class="item">
+                    <img class="caropic" src=" @Html.DisplayFor(modelItem => item.Bottom.BottomPic)">
+                </div>
+
+                <div class="item">
+                    <img class="caropic" src=" @Html.DisplayFor(modelItem => item.Sho.ShoePic)">
+                </div>
+
+                <div class="item">
+                    <img class="caropic" src=" @Html.DisplayFor(modelItem => item.Top.TopPic)">
+                </div>
+            </div>
+
+         
+        </div>
+        <div class="highlight">
+            <p class="text-center">
+                @Html.ActionLink("Edit", "Edit", new { id = item.OutfitID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID })
+            </p>
+        </div>
+    </div>
+}
+
+
