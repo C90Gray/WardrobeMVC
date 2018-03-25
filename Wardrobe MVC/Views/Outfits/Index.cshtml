@@ -11,7 +11,9 @@
 <p class="text-center btn-default">
      @Html.ActionLink("Create New", "Create")
 </p>
-
+<div class="thumbnail">
+    <p id="custom" onload="CustomDescription(this)"></p>
+</div>
 @foreach (var item in Model)
 {
 

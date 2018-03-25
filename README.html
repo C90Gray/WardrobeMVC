@@ -1,0 +1,68 @@
+﻿README
+This page will list all the ways I implimented Javascript into my Wardrobe MVC Project.
+
+Below are the project requirements for the page.
+
+The website MUST allow the user to dynamically add content in your web application utilizing a JavaScript method, buttons and text fields
+
+    I used an alert box on the start of the website that gets and stores the users name ([js line 12, home/start line 15])
+    Note: if the alert box is left empty or the user clicks cancel, their name is default stored as "Valued Customer"
+    The name is then added to some content in the main site to allow personalization of the content. ([js line 47 - 57, home/index line 7] and[js line 88-93, outfits/index line 15] )    
+
+The website MUST allow the user to dynamically remove content from your web application utilizing a JavaScript method, buttons and text fields
+
+    This one is the only weird one I used. I created a button in my navbar that toggles if images are displayed or not displayed ([js line 59-75, shared/layout line 45])
+
+The website MUST allow the user to dynamically show all clothing items that meet certain criteria (for example, are of a certain color or are a certain type, like jeans or tshirts) utilizing a JavaScript method, buttons and text fields
+
+    For this task, I created a filter function on each index page THAT ONLY COMPLETELY WORKS ON THE TOPS INDEX PAGE
+    To do this, I created a new div on the html page that's class is determined by the value of the season type of that particular item within the foreach loop (tops/index line 29)
+    I then created a filter button with a DROPDOWN MENU that shows the available season options. This menu will close either when you select an option, or when you click on the filter button. ([js line 106 - 139, tops/index line 13 - 23])
+    Then, Javascript will take the contents of the dropdown item and compare it to the class name of each item in the for loop, and if they match, it will hide all the other items and only display the matching items. ([js line 141 - 177] tops/index view)
+
+The website MUST allow the user to dynamically enhance size and color of text on mouseover utilizing a JavaScript method, buttons and text fields
+    The text MUST return to its default size and color when a mouseover is not being performed
+
+        I implimented this by changing the font color to gold and the font size to x-large when you hover over the text on the home page. ([js line 95 - 104, home/index line 7])
+
+The website MUST allow the user to navigate to another site utilizing a JavaScript method, buttons and text fields.
+    The website MUST inform the user they are being directed to another site.
+    The website MUST allow the user to cancel the action before it is perfomed.
+    If the user affirms the action, the website must open in another browser tab.
+
+        I created a new section on my home page that explains that this is a mens clothing site and if the user wants to visit a womens site to click below (home/index line 11 - 15)
+        When the button is clicked, an alert box will display, telling the user they are about to leave the site.
+        If they click ok, the are redirected to closetlondon.com
+        if they click cancel, they stay on the current site. (js line 77-86)
+
+Add a copyright with date in the footer of your website.
+    The website MUST dynamically replace the copyright and date text to "created by "Insert Your Name".
+    You can choose to perform this action onhover or onclick.
+
+        This can be seen at the bottom of any page, but is placed in the layout page ([js line 26 - 36, shared/layout line 54])
+
+The website MUST implement an array utilizing JavaScript.
+    The website MUST provide feedback to the user based on the contents of the array.
+
+    For this task, I created a new view called checkout that allows users to enter items into an array. 
+    The array then, depending on how many items they input, gives them a price of their items using an alert box. ([js line 179-205, home/catelog line 11])
+
+The website must include your homework example JavaScript.
+
+    My homework example created a popup that displayed citation information any time you copied text from the website. I put this in the body so it works anywhere on my site. ([js line 38-48, shared/layout line 13])
+
+Include a file called README that describes the project, possibly using this rubric as your starting point. State on your README the ways in which you fulfilled the requirements above. This will not be opened as a view (although you may want to save it as an HTML file), we will simply be reading the code itself to see how you fulfilled the requirements.
+
+    Youre looking at it!
+
+Stretch task:
+
+    Create a drop down menu
+
+        See line 20 of this page
+
+    I also added music that plays on load of my start page only. 
+
+    I also have a loader that runs evey time a page is open (js line 3-10)
+
+END OF README

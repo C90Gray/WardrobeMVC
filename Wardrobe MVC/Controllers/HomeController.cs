@@ -18,6 +18,11 @@ namespace Wardrobe_MVC.Controllers
             return View();
         }
 
+        public ActionResult Catelog()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

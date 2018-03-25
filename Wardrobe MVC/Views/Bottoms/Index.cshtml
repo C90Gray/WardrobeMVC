@@ -9,23 +9,38 @@
 <p class="text-center">
     <a class="btn btn-default" href="~/Bottoms/Create">Create New &raquo;</a>
 </p>
+
+<div class="dropdown">
+    <button onclick="DropDown()" class="dropbtn">Filter By Season</button>
+    <div id="myDropdown" class="dropdown-content">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+        <a onclick="DropUp(); FilterItems(this)">All Seasons</a>
+        <a onclick="DropUp(); FilterItems(this)">Spring</a>
+        <a onclick="DropUp(); FilterItems(this)">Summer</a>
+        <a onclick="DropUp(); FilterItems(this)">Winter</a>
+        <a onclick="DropUp(); FilterItems(this)">Fall</a>
+    </div>
+</div>
+
 <div class="row text-center">
     @foreach (var item in Model)
     {
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="img-thumbnail">
-                <div class="caption">
-                    <h5>
-                        @Html.DisplayFor(modelItem => item.BottomName)
-                    </h5>
-                    <p>
-                        <img class="indexpic" src="@Html.DisplayFor(modelItem => item.BottomPic)" />
-                    </p>
-                    <p>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.BottomID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.BottomID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.BottomID })
-                    </p>
+            <div class="@Html.DisplayFor(modelItem => item.Season.SeasonType)">
+                <div class="img-thumbnail">
+                    <div class="caption">
+                        <h5>
+                            @Html.DisplayFor(modelItem => item.BottomName)
+                        </h5>
+                        <p>
+                            <img class="indexpic" src="@Html.DisplayFor(modelItem => item.BottomPic)" />
+                        </p>
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.BottomID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.BottomID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.BottomID })
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

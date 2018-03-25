@@ -2,10 +2,16 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
+<div class="jumbotron" id="homediv" onmouseover="CustName()" onmouseout="CustDefault()">
     <h1>Chris's Closet</h1>
-    <p class="lead">Welcome to Chris's Closet! Click the button below to pick out a new outfit, or browse the seperate categories to see what fancies your style!</p>
+    <p class="lead" id="lead" onmouseover="ChangeText()" onmouseout="ChangeBack()">Welcome to Chris's Closet! Click the button below to pick out a new outfit, or browse the seperate categories to see what fancies your style!</p>
     <a class="btn btn-default" href="~/Outfits/Index">Pick Your Outfit</a>
+</div>
+
+<div class="jumbotron">
+    <h2>Disclaimer</h2>
+    <p>Chris's Closet is a MENS ONLY appearal website. For WOMENS clothing, follow the link below. </p>
+    <a class="btn btn-success" id="women" onclick="GoToLondonCloset(this)">Women's Clothing</a>
 </div>
 
 <div class="row">

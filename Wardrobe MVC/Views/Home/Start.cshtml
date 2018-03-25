@@ -1,7 +1,7 @@
 ﻿@{
     Layout = null;
 }
-
+<script src="~/Content/myscript.js"></script>
 <link href="~/Content/startstyle.css" rel="stylesheet" />
 <!DOCTYPE html>
 
@@ -12,7 +12,10 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body onload="getName()">
+    <audio autoplay="autoplay" loop="loop" id="myAudio">
+        <source src="~/Content/Audio/Snarky%20Puppy%20-%20Lingus%20(We%20Like%20It%20Here).mp3" type="audio/mpeg" />
+    </audio>"
     <div class="overlay center-block">
         <h1 class="text-center">Welcome To Chris's Closet</h1>
         <h4 class="text-center">Find your perfect outfit today!</h4>
